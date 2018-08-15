@@ -1,0 +1,22 @@
+{
+  "name": "resumebuilder",
+  "version": "1.0.0",
+  "description": "resume bulding app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node app"
+  },
+  "author": "nikita",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.5"
+  },
+  "devDependencies": {
+    "@ionic/app-scripts": "^3.1.11",
+    "ws": "3.3.2"
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/userpage.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body onload="initialLoad()">
+    <header style="width: 100%; background-color :rgb(125, 125, 170);height: 20%;" class="blockdesign">
+            <p>welcome to ur home page  dear <%= info.firstname %></p>
+            <p id="idEmail" style="float : right"><%=info.emailid %></p>
+            <button id="logout">log out</button>
+    </header>
+    
+   
+    <div id="viewRes" class="enabl">
+          <p>in view resume</p>
+          <pre>
+              NAME : <%= info.firstname%> <% info.surname %>
+              DOB  : <%= info.dateofbirth %>
+          </pre>
+          <dl>
+            <% for(var i=0;i<allSkill.length;i++){ %>
+            <div style="background-color: rgb(134, 149, 153);border:rgb(168, 132, 168) solid 2px;border-radius :15px ;width:50%">
+              <dt><%=allSkill[i].skill%></dt>
+              <dd><%=allSkill[i].skillDec%></dd>
+            </div><br><br>
+            <% } %>
+          </dl>
+    </div>
+    <div id="editRes" class="disble">
+        <p>in edit resume</p>
+        <div id="editMenuWorkSpace">
+           <ul id="editMenu">
+                <li><button id="addSkill" onclick="addSkillCode()">add a skill</button></li>
+                <li><button id="editSkill" onclick="editSkillCode()">edit a skill</button></li>
+                <li><button id="deleteSkill" onclick="deleteSkillCode()">delete a skill</button></li>
+          </ul>
+       </div>
+        <div id="deleteskillspace" class="decor">
+             <h3>select skill to delete</h3>
+         <!--    <ul class="listOfSkill" id="deleteSkillList">
+                 <li>list of skills</li>
+             </ul>   -->
+             <select class="listOfSkill" id="deleteSkillList">
+                <option></option>
+             </select>
+             <h3 id="gotdelSkill"></h3>
+             <button id="deletingskill">Delete</button>
+
+        </div>
+        <div id="editskillspace" class="decor">
+                <h3>Select skill to edit</h3>
+                <select class="listOfSkill" id="editSkillList">
+                    <option></option>
+                </select>
+                <h3 id="goteditingskill"></h3>
+                <textarea id="gotedittextarea" rows="6" cols="50" placeholder="typehere"></textarea>
+                <button id="editingskill">UPDATE</button>
+        </div>
+        <div id="addskillspace" class="decor">
+            <button id="createskill">Click to add skill</button><br><br>
+            <input type="text" id="addskillid" placeholder="Skill Name"><br>
+            <textarea id="gotaddtextarea" rows="6" cols="50" placeholder="Skill description"></textarea><br>
+            <button id="addskill">Add</button>
+        </div>
+
+    </div>
+    <footer style="width: 100%; background-color :rgb(125, 125, 150);"class="blockdesign">
+            <button id="viewResume" style=" background-color :rgb(124, 189, 167);width:45%; " onclick="resmview()">view</button>
+            <button id="editResume" style=" background-color :rgb(124, 189, 167);width:45%; " onclick="resedit()">edit</button>
+    </footer>
+    <script type="text/javascript" src="/js/userpage.js"></script>
+    <script type="text/javascript" src="/js/ajaxwalifile.js"></script>
+    <script type="text/javascript" src="/js/homepage.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/home.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body onload="initialSetup()">
+    <div class="fullScreenWidth fullScreen">
+        <br><br>
+      <form id="login" onsubmit="" action="/login" method="POST">
+        <div class="content" style="padding-right:230px">
+            <p>way to login</p>
+           <input type="submit" value="login"  >
+        </div>
+        <div class="content">
+            <p>Password :</p> <input type="password" id="userPassword" class="textBox">
+            <br><a href="#" style="font-size:12px; color:rgb(190, 197, 197)">forgot password?</a>
+            
+        </div>
+        <div class="content">
+            <p>User Name :</p> <input type="text" id="userName" class="textBox">
+        </div>
+                
+      </form>
+    </div>
+    <div class="fullScreenWidth">
+        <div class="regContent" style="float:left">
+            <p>some image float left</p>
+        </div>
+        <div class="regContent" style="float:right">
+            <vr>
+          <form id="registration" onsubmit="createUser()" action="/register" method="POST">
+            <h3>create a account</h3><br>
+            <p id="tocheckPresent" style="color:red"> <%= data.uEmail %> already present </p>
+             <input type="text" id="regFirstName" placeholder="First Name" name="FirstName">
+             <input type="text" id="regSurname" placeholder="Surname" name="surName"><br>
+             <input type="text" id="regEmail" placeholder="Email Id" name="uEmail"><br>
+             <input type="password" id="rPassword" placeholder="New Password" name="uPassword"><br>
+             <input type="password" id="confirmPassword" placeholder="Confirm Password" name="cPassword"><br>
+             <h4>Birthday</h4>
+             <div >
+                 <select id="birthDay" name="dayOB">
+                     <option value="0">Day</option>
+                 </select>
+                 <select id="birthMonth" name="monthOB">
+                     <option value="not-selected">Month</option>
+                 </select>
+                 <select id="birthYear" name="yearOB">
+                     <option value="not-selected">Year</option>
+                 </select>
+             </div>
+             <br>
+             <input type="radio" name="gender" value="M"> <span>Male</span>
+             <input type="radio" name="gender" value="F"> <span>Female</span>
+             <input type="radio" name="gender" value="O"> <span>Other</span>
+             <br>
+             <input type="checkbox"  id="termsCheck" onclick="enableRegistration()"> <span style="font-size:12px">by checking you agree <span style="color:red;">*</span> <a href="#" onclick="javascript:termsAndCondition()">terms and condition</a></span>
+             <br>
+             <input type="submit" value="SignUp" id="regSubmit">
+            </form>
+        
+        </div>
+    </div>
+    <script type="text/javascript" src="/js/home.js"></script>
+    <script type="text/javascript" src="/js/ajaxwalifile.js"></script>
+<!--<script type=="text/javascript" src="../controllers/resumebuilderController.js"></script>  -->
+</body>
+</html>

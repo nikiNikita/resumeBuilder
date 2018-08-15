@@ -1,0 +1,117 @@
+body{
+    margin: 0px;
+    padding:0;
+    border: 0;
+}
+
+
+.content{
+    display : inline-block;
+    float : right;
+    margin: 5px;
+    border:0;
+    padding : 0;
+    padding-bottom:0;
+    height : 100px;
+    color : white;
+}
+.content p{
+    margin:0px 0px 5px 0px;
+    border:0;
+    padding:0;
+    font-size: 15px;
+}
+
+.fullScreen{
+    padding :0px;
+    border:0;
+    margin:0;
+    height: 100px;
+    background-color: rgb(92, 145, 175);
+    overflow: hidden;
+
+}
+
+.textBox{
+    margin:0;
+    padding:0;
+    border-bottom:0;
+    
+}
+
+.regContent{
+    margin:0;
+    border:0;
+    padding: 0;
+    width :50%;
+
+}
+
+#registration input{
+    margin-bottom:10px;
+}
+
+.content a:hover{
+    color : red;
+}
+
+
+
+
+
+
+#menu{
+    margin:0;
+    border:0;
+    padding:0;
+    width:100%;
+    height :50px;
+    text-align: center;
+    opacity: 0.5;
+    display:inline-block;
+    background-color: rgb(187, 184, 184) ;
+}
+#menu:hover{
+    opacity: 1;
+}
+#menu ul{
+    margin:0;
+    border:0;
+    display : flex;
+    width: 100%;
+    list-style-type:none;
+    
+    text-align: center;
+}
+
+#menu ul li{
+    margin:0;
+    border:0;
+    padding:0;
+    padding-top:10px;
+    text-decoration: none;
+    font-style:none;
+    font-weight: bold;
+
+}
+
+li a{
+    padding:10px;
+    font-size :12px;
+    text-decoration: none;
+   
+
+}
+
+.menuStyle{
+    font-family: sans-serif;
+    color:black;
+    margin:10px;
+    padding:10px;
+    border:5px;
+
+}
+
+.menuStyle:hover{
+    background-color : rgb(222, 235, 199);
+}
